@@ -43,6 +43,9 @@ The node accepts the following inputs:
 
 ## Recommended Workflow
 
+-> adress speed here
+-> adress tensorrt depth
+
 ## License
 
 This project is licensed under CC BY-NC-SA 4.0 - see the [LICENSE](LICENSE) file for details.
