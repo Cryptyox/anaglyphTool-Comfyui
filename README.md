@@ -73,4 +73,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Acknowledgments
 
-Big shoutout to https://github.com/mikeymcfish who created https://github.com/mikeymcfish/FishTools. This was my original inspiration as I was very fond of his node but needed something capable of bulk processing.
+Big shoutout to https://github.com/mikeymcfish who created https://github.com/mikeymcfish/FishTools. This was my original inspiration as I was very fond of his node, but needed something capable of bulk processing.
