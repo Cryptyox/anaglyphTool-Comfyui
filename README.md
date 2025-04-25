@@ -48,11 +48,12 @@ The node accepts the following inputs:
 *Basic workflow showing image and depth map inputs*
 
 ![Basic Workflow with DepthAnythingV2](examples/basic_workflow_depthanything2.png)
+*Basic workflow for single image conversion using depth-anything-V2*
 
 ### Results
 | Original | Depth Map | Anaglyph Result |
 |:--------:|:---------:|:---------------:|
-| ![Original](examples/original.png) | ![Depth](examples/depth.png) | ![Anaglyph](examples/anaglyph.png) |
+| ![Original](examples/original.jpg) | ![Depth](examples/depth.png) | ![Anaglyph](examples/anaglyph.png) |
 
 ### Video Processing Example
 ![Video Workflow](examples/videoworkflow.png)
