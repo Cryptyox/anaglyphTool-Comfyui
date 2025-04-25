@@ -18,7 +18,7 @@ class AnaglyphTool:
     RETURN_TYPES = ("IMAGE",)
 
     FUNCTION = "create_anaglyph_batch"
-    CATEGORY = "ImageProcessing/GPU"
+    CATEGORY = "ImageProcessing/GPU/Stereo"
 
     def warp_image_batch(self, img_bchw, shift_map_bhw, target_device): # Changed 'device' to 'target_device' for clarity
         B, C, H, W = img_bchw.shape

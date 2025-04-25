@@ -1,21 +1,28 @@
 """
 @author: Timon
-@title: AnaglyphTool    
+@title: Anaglyph Tool (CUDA)
 @nickname: Angly
-@description: The comfyui plugin provides CUDA GPU accelerated creation of anagyph images from a color and depth image input.
+@description: Provides CUDA GPU accelerated nodes for creating 3D images.
 """
 
-from .Anaglyphtool import AnaglyphTool
+# Import the node classes and their specific mappings
+from .Anaglyphtool import AnaglyphTool # Assumes class name is AnaglyphTool
+from .CrossEyeTool import NODE_CLASS_MAPPINGS as CrossEye_MAPPINGS
+from .CrossEyeTool import NODE_DISPLAY_NAME_MAPPINGS as CrossEye_DISPLAY_MAPPINGS
 
-print(f"-- AnaglyphTool Plugin Loaded --")
+print(f"-- Loading Stereo Tools Plugin --") 
 
-node_list = [
-    "Anaglyphtool",
-]
-
+# Combine class mappings
 NODE_CLASS_MAPPINGS = {
-    "Anaglyphtool" : AnaglyphTool,
-    }
+    "AnaglyphTool": AnaglyphTool,
+    **CrossEye_MAPPINGS
+}
+
+# Combine display name mappings
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "Anaglyphtool" : "Anaglyphtool",
-    }
+    "AnaglyphTool": "Anaglyph Tool (CUDA)",
+    **CrossEye_DISPLAY_MAPPINGS
+}
+
+# Export all mappings for ComfyUI
+__all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
