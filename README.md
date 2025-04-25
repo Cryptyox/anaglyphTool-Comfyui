@@ -43,8 +43,24 @@ The node accepts the following inputs:
 
 ## Recommended Workflow
 
--> adress speed here
--> adress tensorrt depth
+### Basic Usage
+![Basic Workflow](examples/basic_workflow.png)
+*Basic workflow showing image and depth map inputs*
+
+![Basic Workflow with DepthAnythingV2](examples/basic_workflow_depthanything2.png)
+
+### Results
+| Original | Depth Map | Anaglyph Result |
+|:--------:|:---------:|:---------------:|
+| ![Original](examples/original.png) | ![Depth](examples/depth.png) | ![Anaglyph](examples/anaglyph.png) |
+
+### Video Processing Example
+![Video Workflow](examples/videoworkflow.png)
+*Example workflow for batch processing video frames*
+
+I highly recommend using [Depth Anything Tensorrt](https://github.com/spacewalk01/depth-anything-tensorrt) for the depth map creation to save time. The batch size is a huge factor when it comes to speed. Increase the batch size until your VRAM is full. On a 3090 with 24gb of VRAM you can batch process 500 480p Frames in 0,5s.
+
+**Note**: You'll need red-cyan 3D glasses to view the anaglyph effects.
 
 ## License
 
