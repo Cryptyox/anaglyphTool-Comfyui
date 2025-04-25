@@ -5,7 +5,7 @@
 @description: The comfyui plugin provides CUDA GPU accelerated creation of anagyph images from a color and depth image input.
 """
 
-from .Anaglyphtool import Anaglyphtool
+from .Anaglyphtool import AnaglyphTool
 
 print(f"-- AnaglyphTool Plugin Loaded --")
 
@@ -14,7 +14,7 @@ node_list = [
 ]
 
 NODE_CLASS_MAPPINGS = {
-    "Anaglyphtool" : Anaglyphtool,
+    "Anaglyphtool" : AnaglyphTool,
     }
 NODE_DISPLAY_NAME_MAPPINGS = {
     "Anaglyphtool" : "Anaglyphtool",
