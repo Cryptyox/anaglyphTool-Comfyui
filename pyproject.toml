@@ -1,7 +1,7 @@
 [project]
 name = "anaglyphtool-comfyui"
 description = "This Comfyui node creates an anaglyph image from a color and depth map input. It achieves high speeds suitable for video to anaglyph conversion by using CUDA GPU acceleration."
-version = "1.2.0"
+version = "1.3.0"
 license = {file = "LICENSE"}
 dependencies = ["torch"]
 
