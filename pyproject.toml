@@ -1,0 +1,15 @@
+[project]
+name = "anaglyphtool-comfyui"
+description = "This Comfyui node creates an anaglyph image from a color and depth map input. It achieves high speeds suitable for video to anaglyph conversion by using CUDA GPU acceleration."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["torch"]
+
+[project.urls]
+Repository = "https://github.com/Cryptyox/anaglyphTool-Comfyui"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "cryptox"
+DisplayName = "anaglyphTool-Comfyui"
+Icon = "anaglyphtool.jpg"
