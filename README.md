@@ -31,10 +31,6 @@ The node accepts the following inputs:
 - **divergence**: Controls the 3D effect strength (-10.0 to 10.0, default: 2.0)
 - **zero_parallax_depth**: Sets the focal plane (0.0 to 1.0, default: 0.5)
 
-## Examples
-
-[Add example images/workflow screenshots here]
-
 ## Requirements
 
 - ComfyUI
