@@ -102,8 +102,8 @@ class AnaglyphTool:
              return (image.permute(0, 2, 3, 1).contiguous(),)
 
         if depth_bhw.shape[1:] != (H, W):
-             print(f"Error: Image ({H}x{W}) and Depthmap ({depth_bhw.shape[1:]}) dimensions mismatch.") # Some Video inputs have wierd scaling issues, has been solved by a change I did but don't really know why, shouldn't really occur anymore
-             return (image.permute(0, 2, 3, 1).contiguous(),)
+             print(f"Warning: Depthmap dimensions {depth_bhw.shape[1:]} do not match image dimensions ({H}, {W}). Resizing depthmap.")
+             depth_bhw = F.interpolate(depth_bhw.unsqueeze(1), size=(H, W), mode="bilinear", align_corners=False).squeeze(1)
 
         # Batch Depth Processing (on target_device)
         processed_depth = 1.0 - depth_bhw if invert_depthmap else depth_bhw

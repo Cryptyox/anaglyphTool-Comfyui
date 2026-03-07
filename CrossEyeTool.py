@@ -99,8 +99,8 @@ class CrossEyeTool:
 
         # Validate dimensions match between image and processed depth map
         if depth_bhw.shape[1:] != (H, W):
-             print(f"Error: Image ({H}x{W}) and Depthmap ({depth_bhw.shape[1:]}) dimensions mismatch after processing.")
-             return (image.permute(0, 2, 3, 1).contiguous(),)
+             print(f"Warning: Depthmap dimensions {depth_bhw.shape[1:]} do not match image dimensions ({H}, {W}). Resizing depthmap.")
+             depth_bhw = F.interpolate(depth_bhw.unsqueeze(1), size=(H, W), mode="bilinear", align_corners=False).squeeze(1)
 
         # --- Depth Map Normalization ---
         # Invert if requested (typically needed as depth maps often store near=0, far=1)
